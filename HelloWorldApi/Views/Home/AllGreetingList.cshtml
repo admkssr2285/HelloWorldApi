@@ -1,0 +1,18 @@
+﻿@model List<HelloWorldApi.Models.GreetingModel>
+
+<h2>AllGreetingList</h2>
+
+<div>
+    @foreach (var item in Model)
+    {
+        if (item.Id == 0)
+        {<h3>Casual</h3>}
+        if (item.Id == 1)
+        { <h3>Spanish</h3>}
+        if (item.Id == 2)
+        { <h3>French</h3>}
+        if (item.Id == 3)
+        { <h3>Norwegian</h3>}
+        <p>Type: @item.Id  Greeting: @item.GeneratedGreeting</p>
+    }
+</div>
